@@ -1,0 +1,14 @@
+.search {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar {
+  width: 500px;
+  height: 50px;
+}
+
+.search-button {
+  width: 50px;
+  height: 50px;
+}

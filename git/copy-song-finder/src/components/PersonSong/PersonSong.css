@@ -1,0 +1,25 @@
+.person-song {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  width: 500px;
+}
+
+.song-choice {
+  background-color: aquamarine;
+  height: 30px;
+}
+
+.tail {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 5px;
+  height: 30px;
+  border-bottom: 1px solid black;
+}
+
+.button {
+  height: 25px;
+  width: 25px;
+}
