@@ -1,8 +1,11 @@
+import "./LoginPage.css"
 import Login from "../../components/Login/Login"
 
-const LoginPage = () => {
+const LoginPage = ({ setIsAuth }) => {
   return (
-    <Login />
+    <div className="login-page">
+      <Login setIsAuth={setIsAuth}/>
+    </div>
   )
 }
 

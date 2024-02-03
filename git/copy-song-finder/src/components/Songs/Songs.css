@@ -1,7 +1,7 @@
 .new-post {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid white;
   width: 500px;
 }
 
@@ -39,32 +39,6 @@
 .new-song-choice {
   background-color: aquamarine;
   height: 30px;
-}
-
-.song {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid black;
-  width: 500px;
-}
-
-.song-choice {
-  background-color: aquamarine;
-  height: 30px;
-}
-
-.song-tail {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: 5px;
-  height: 30px;
-  border-bottom: 1px solid black;
-}
-
-.song-button {
-  height: 25px;
-  width: 25px;
 }
 
 

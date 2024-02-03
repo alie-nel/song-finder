@@ -1,3 +1,17 @@
+.song-page {
+  margin-left: 20px;
+}
+
+.song-titles {
+  margin: 0;
+  color: white;
+}
+
+#song-artist {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 .posting {
   display: flex;
 }

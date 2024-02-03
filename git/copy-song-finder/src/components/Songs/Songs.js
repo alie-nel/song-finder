@@ -62,35 +62,6 @@ const Songs = () => {
       </div>
     </div>
 
-    <div className="song">
-      <div className="song-choice">
-
-      </div>
-      <div className="song-tail">
-        <button id="song-star-button" className="song-button">
-          
-        </button>
-        <button id="song-like-button" className="song-button">
-          
-        </button>
-        <p id="song-num-likes" className="song-data">
-          23
-        </p>
-        <button id="song-dislike-button" className="song-button">
-          
-        </button>
-        <p id="song-num-dislikes" className="song-data">
-          2
-        </p>
-        <button id="song-comments-button" className="song-button">
-          
-        </button>
-        <p id="song-num-comments" className="song-data">
-          4
-        </p>
-      </div>
-    </div>
-
     {posts.map((post) => (
     <div className="post">
       <div className="post-head">
