@@ -12,7 +12,11 @@ const Login = ({ setIsAuth }) => {
 
   const login = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await createUserWithEmailAndPassword(auth, email, password).then((result) => {
+        localStorage.setItem("isAuth", true);
+        setIsAuth(true);
+        redirect("/");
+      });
     } catch (err) {
       console.error(err)
     }
@@ -27,18 +31,6 @@ const Login = ({ setIsAuth }) => {
       });
     } catch (err) {
       console.error(err)
-    }
-  }
-
-  const logout = async () => {
-    try {
-      await signOut(auth).then(() => {
-        localStorage.clear();
-        setIsAuth(false);
-        redirect("/login");
-      });
-    } catch (err) {
-      console.error(err);
     }
   }
   
@@ -62,7 +54,6 @@ const Login = ({ setIsAuth }) => {
         <p className="login-text">or</p>
         <button className="login-button" onClick={googleLogin}>LOG IN WITH GOOGLE</button>
       </div>
-      <button onClick={logout}>Logout</button>
     </>
   )
 }
