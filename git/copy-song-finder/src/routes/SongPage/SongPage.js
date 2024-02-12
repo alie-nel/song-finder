@@ -1,6 +1,6 @@
 import "./SongPage.css"
 import NewPost from "../../components/Posts/NewPost";
-import Post from "../../components/Posts/Post";
+import Posts from "../../components/Posts/Posts";
 
 const SongPage = ({ isAuth }) => {
   return (
@@ -9,7 +9,7 @@ const SongPage = ({ isAuth }) => {
       <h2 className="song-titles" id="song-artist">Artist Name</h2>
         
         <NewPost isAuth={isAuth}/>
-        <Post isAuth={isAuth}/>
+        <Posts isAuth={isAuth}/>
     </div>
   )
 }

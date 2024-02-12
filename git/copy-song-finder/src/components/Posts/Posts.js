@@ -1,14 +1,12 @@
-import './Post.css';
+import './Posts.css';
 import { useEffect, useState } from "react";
 import { db, auth } from "../../config/firebase";
 import { getDocs, deleteDoc, doc, collection } from "firebase/firestore";
-import { useNavigate } from 'react-router-dom';
 
-const Post = ({ isAuth }) => {
+const Posts = ({ isAuth }) => {
   const [posts, setPosts] = useState([]);
 
   const postsCollection = collection(db, "posts");
-  let redirect = useNavigate();
 
   useEffect(() => {
     const getPosts = async () => {
@@ -25,6 +23,27 @@ const Post = ({ isAuth }) => {
     };
     
     getPosts();
+  }, []);
+
+  const [songs, setSongs] = useState([]);
+
+  const songsCollection = collection(db, "songs");
+
+  useEffect(() => {
+    const getSongs = async () => {
+      try {
+        const songsData = await getDocs(songsCollection);
+        const importantData = songsData.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setSongs(importantData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    
+    getSongs();
   }, []);
 
   const deletePost = async (id) => {
@@ -85,4 +104,4 @@ const Post = ({ isAuth }) => {
   </>
 )}
 
-export default Post;
+export default Posts;

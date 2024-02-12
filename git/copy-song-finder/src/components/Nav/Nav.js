@@ -20,11 +20,15 @@ const Nav = ({ isAuth, setIsAuth }) => {
   return (
     <nav>
       <Link to="/">Home</Link>
-      <Link to="/profile">Profile</Link>
+      
       {!isAuth ? 
         <Link to="/login">Login</Link> 
         : 
-        <button onClick={logOut}>Logout</button>}
+        <>
+          <Link to="/profile">Profile</Link>
+        <button onClick={logOut}>Logout</button>
+        </>
+      }
     </nav>
   )
 }

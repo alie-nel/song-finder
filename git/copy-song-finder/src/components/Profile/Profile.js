@@ -1,14 +1,13 @@
 import "./Profile.css";
+import { auth } from "../../config/firebase";
 
 const Profile = () => {
+  
   return (
     <div className="profile">
       <div className="profile-head">
-        <div className="profile-pic">
-
-        </div>
         <p className="profile-username">
-          username
+          {auth.currentUser.displayName}
         </p>
       </div>
       <div className="profile-buttons">
